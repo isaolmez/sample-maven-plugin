@@ -1,4 +1,4 @@
-package com.isa.maven.plugin.sample;
+package com.isa.maven.plugin.sample2;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -12,7 +12,8 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
 /**
- * Basic maven plugin example that showcases parameter usage and default phase binding 
+ * Basic maven plugin example that showcases parameter usage and default phase binding
+ * Refer to https://maven.apache.org/guides/plugin/guide-java-plugin-development.html
  */
 
 @Mojo(name = "goodbye", defaultPhase = LifecyclePhase.COMPILE)

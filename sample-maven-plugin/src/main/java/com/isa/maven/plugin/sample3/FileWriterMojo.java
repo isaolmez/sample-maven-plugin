@@ -1,4 +1,4 @@
-package com.isa.maven.plugin.sample;
+package com.isa.maven.plugin.sample3;
 
 /*
  * Copyright 2001-2005 The Apache Software Foundation.
@@ -29,9 +29,11 @@ import java.io.IOException;
 
 /**
  * Goal which touches a timestamp file.
+ * Refer to https://maven.apache.org/guides/plugin/guide-java-plugin-development.html
  */
+
 @Mojo(name = "touch", defaultPhase = LifecyclePhase.PROCESS_SOURCES)
-public class ArchTypeMojo extends AbstractMojo {
+public class FileWriterMojo extends AbstractMojo {
 	/**
 	 * Location of the file.
 	 */

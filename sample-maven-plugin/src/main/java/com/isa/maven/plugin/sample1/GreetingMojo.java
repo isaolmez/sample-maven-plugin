@@ -1,4 +1,4 @@
-package com.isa.maven.plugin.sample;
+package com.isa.maven.plugin.sample1;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -15,6 +15,7 @@ import org.apache.maven.plugins.annotations.Parameter;
 
 /**
  * Basic maven plugin example that showcases parameter usage 
+ * https://maven.apache.org/guides/plugin/guide-java-plugin-development.html
  */
 
 @Mojo(name = "hello")

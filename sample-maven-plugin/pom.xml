@@ -42,6 +42,7 @@
 				<artifactId>maven-plugin-plugin</artifactId>
 				<version>3.2</version>
 				<configuration>
+					<!-- Following the ${prefix}-maven-plugin convention -->
 					<goalPrefix>sample</goalPrefix>
 					<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
 				</configuration>
