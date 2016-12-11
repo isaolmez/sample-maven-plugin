@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.isa</groupId>
+	<artifactId>sample-maven-client</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<!-- Use the sample plugin -->
+			<plugin>
+				<groupId>com.isa</groupId>
+				<artifactId>sample-maven-plugin</artifactId>
+				<version>0.1</version>
+				<!-- This configuration does not play well with m2e -->
+				<executions>
+					<execution>
+						<id>hello</id>
+						<phase>process-sources</phase>
+						<configuration>
+							<project>
+								Overriden Project Name
+							</project>
+						</configuration>
+						<goals>
+							<goal>hello</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>goodbye</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>goodbye</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>touch</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>touch</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
