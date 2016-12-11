@@ -1,4 +1,4 @@
-package com.isa.plugin.maven.sample;
+package com.isa.maven.plugin.sample;
 
 /*
  * Copyright 2001-2005 The Apache Software Foundation.
