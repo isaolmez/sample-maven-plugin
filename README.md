@@ -1,2 +1,2 @@
-# sample-maven-plugin
-Basic Maven plugin development
+# Sample Maven Plugin
+Basic Maven plugin development example
