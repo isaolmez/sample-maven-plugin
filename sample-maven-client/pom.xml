@@ -27,26 +27,37 @@
 				<!-- This configuration does not play well with m2e -->
 				<executions>
 					<execution>
-						<id>hello</id>
+						<id>execution1</id>
 						<phase>process-sources</phase>
 						<configuration>
-							<project>
+							<projectName>
 								Overriden Project Name
-							</project>
+							</projectName>
+							<language>en
+							</language>
+							<dictionary>
+								<en>Hello</en>
+								<de>Hallo</de>
+								<tr>Merhaba</tr>
+							</dictionary>
 						</configuration>
 						<goals>
 							<goal>hello</goal>
 						</goals>
 					</execution>
 					<execution>
-						<id>goodbye</id>
+						<id>execution2</id>
 						<phase>compile</phase>
 						<goals>
 							<goal>goodbye</goal>
 						</goals>
+						<configuration>
+							<country>John Doe
+							</country>
+						</configuration>
 					</execution>
 					<execution>
-						<id>touch</id>
+						<id>execution3</id>
 						<phase>compile</phase>
 						<goals>
 							<goal>touch</goal>

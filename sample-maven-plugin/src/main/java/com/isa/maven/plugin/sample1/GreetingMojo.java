@@ -1,8 +1,6 @@
 package com.isa.maven.plugin.sample1;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Map;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -20,14 +18,23 @@ import org.apache.maven.plugins.annotations.Parameter;
 
 @Mojo(name = "hello")
 public class GreetingMojo extends AbstractMojo {
-	private DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
-
+	// TODO Why does it fail when name is specified 
 	@Parameter(defaultValue = "${project.artifactId}")
 	private String project;
 
+	@Parameter(defaultValue = "en")
+	private String language;
+
+	@Parameter
+	private Map<String, String> dictionary;
+
 	public void execute() throws MojoExecutionException, MojoFailureException {
-		Date now = new Date();
-		getLog().info(dateFormat.format(now));
-		getLog().info(project + " =====> Hello world!");
+		getLog().info("Plugin Configuration");
+		getLog().info(String.format("%s : %s", "projectName", project));
+		getLog().info(String.format("%s : %s", "language", language));
+		for (Map.Entry<String, String> entry : dictionary.entrySet()) {
+			getLog().info(String.format("%s : %s", entry.getKey(), entry.getValue()));
+		}
+
 	}
 }

@@ -1,9 +1,5 @@
 package com.isa.maven.plugin.sample2;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
@@ -18,15 +14,15 @@ import org.apache.maven.plugins.annotations.Parameter;
 
 @Mojo(name = "goodbye", defaultPhase = LifecyclePhase.COMPILE)
 public class GoodbyeMojo extends AbstractMojo {
-	private DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
-
 	@Parameter(defaultValue = "${project.artifactId}")
 	private String project;
 
-	public void execute() throws MojoExecutionException, MojoFailureException {
-		Date now = new Date();
-		getLog().info(dateFormat.format(now));
-		getLog().info(project + " =====> Goodbye world!");
+	@Parameter
+	private String country;
 
+	public void execute() throws MojoExecutionException, MojoFailureException {
+		getLog().info("Plugin Configuration");
+		getLog().info(String.format("%s : %s", "project", project));
+		getLog().info(String.format("%s : %s", "country", country));
 	}
 }
