@@ -32,9 +32,10 @@ public class GreetingMojo extends AbstractMojo {
 		getLog().info("Plugin Configuration");
 		getLog().info(String.format("%s : %s", "projectName", project));
 		getLog().info(String.format("%s : %s", "language", language));
-		for (Map.Entry<String, String> entry : dictionary.entrySet()) {
-			getLog().info(String.format("%s : %s", entry.getKey(), entry.getValue()));
+		if(dictionary != null && !dictionary.isEmpty()){
+			for (Map.Entry<String, String> entry : dictionary.entrySet()) {
+				getLog().info(String.format("%s : %s", entry.getKey(), entry.getValue()));
+			}
 		}
-
 	}
 }

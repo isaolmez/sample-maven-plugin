@@ -6,6 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<outputDir>D:\test</outputDir>
 	</properties>
 
 	<build>
@@ -52,7 +53,7 @@
 							<goal>goodbye</goal>
 						</goals>
 						<configuration>
-							<country>John Doe
+							<country>Canada
 							</country>
 						</configuration>
 					</execution>

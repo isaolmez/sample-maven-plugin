@@ -41,8 +41,9 @@ public class FileWriterMojo extends AbstractMojo {
 	private File outputDirectory;
 
 	public void execute() throws MojoExecutionException {
+		getLog().info(String.format("Writing to: %s", outputDirectory));
+		
 		File f = outputDirectory;
-
 		if (!f.exists()) {
 			f.mkdirs();
 		}
