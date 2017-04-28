@@ -1,4 +1,9 @@
+*.class
 **/target
+.classpath
 .project
 .settings
-.classpath
+**/.idea
+**/.sonar
+**/*.iml
+**/logs
